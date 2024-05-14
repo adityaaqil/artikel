@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tambah Data</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #E2BFB3;
+            color: #333;
+            padding: 20px;
+        }
+        h2 {
+            text-align: center;
+            color: #555;
+        }
+        form{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 600px;
+  padding: 40px;
+  transform: translate(-50%, -50%);
+  background: #FFBE98;
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0,0,0,.6);
+  border-radius: 10px;
+        }
+        label {
+            color: #666;
+            font-size: 14px;
+        }
+        input[type="text"],
+        input[type="file"],
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 6px;
+            margin-bottom: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            text-align: center;
+            display: inline-block;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        .button {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 90%;
+  margin-top: 30px;
+}
+
+.button {
+  padding: 10px 20px;
+  margin-right: 10px; 
+  background-color: #007bff; 
+  color: #fff; 
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: #0056b3; 
+}
+    </style>
+</head>
+<body>
+    <div class="buttons">
+        <button class="button" onclick="window.location.href='tampil_data.php'">kembali</button>
+        </div>
+    <form action="proses_tambah_data.php" method="post" enctype="multipart/form-data">
+        <h2>Form Tambah Data</h2>
+        <label for="nama">Nama:</label><br>
+        <input type="text" id="nama" name="nama"><br>
+        
+        <label for="judul">Judul:</label><br>
+        <input type="text" id="judul" name="judul"><br>
+        
+        <label for="gambar">Gambar:</label><br>
+        <input type="file" id="gambar" name="gambar"><br>
+        
+        <label for="isi">Isi:</label><br>
+        <textarea id="isi" name="isi" rows="4" cols="50"></textarea><br>
+        
+        <input type="submit" value="Tambah Data">
+    </form>
+</body>
+</html>
